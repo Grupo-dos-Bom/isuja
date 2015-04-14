@@ -221,7 +221,7 @@
 				42EAF1361ADD7BC70030E0E0 /* LaundryViewController.swift in Sources */,
 				42B0B6C41ADDA23700F4EE47 /* DataManager.swift in Sources */,
 				42EAF1321ADD7BC70030E0E0 /* AppDelegate.swift in Sources */,
-				42EAF1341ADD7BC70030E0E0 /* FirstViewController.swift in Sources */,
+				42EAF1341ADD7BC70030E0E0 /* WardrobeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
