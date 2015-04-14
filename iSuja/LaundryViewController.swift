@@ -8,18 +8,23 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class LaundryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    var dataManager = DataManager.sharedInstance
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        dataManager = DataManager.sharedInstance
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        dataManager.dirtyClothes.count
+    }
 
 }
 
