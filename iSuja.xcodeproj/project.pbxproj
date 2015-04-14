@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		42EAF1321ADD7BC70030E0E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EAF1311ADD7BC70030E0E0 /* AppDelegate.swift */; };
-		42EAF1341ADD7BC70030E0E0 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EAF1331ADD7BC70030E0E0 /* FirstViewController.swift */; };
+		42EAF1341ADD7BC70030E0E0 /* WardrobeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EAF1331ADD7BC70030E0E0 /* WardrobeViewController.swift */; };
 		42EAF1361ADD7BC70030E0E0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EAF1351ADD7BC70030E0E0 /* SecondViewController.swift */; };
 		42EAF1391ADD7BC70030E0E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42EAF1371ADD7BC70030E0E0 /* Main.storyboard */; };
 		42EAF13B1ADD7BC70030E0E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42EAF13A1ADD7BC70030E0E0 /* Images.xcassets */; };
@@ -30,7 +30,7 @@
 		42EAF12C1ADD7BC70030E0E0 /* iSuja.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSuja.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42EAF1301ADD7BC70030E0E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42EAF1311ADD7BC70030E0E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		42EAF1331ADD7BC70030E0E0 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		42EAF1331ADD7BC70030E0E0 /* WardrobeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeViewController.swift; sourceTree = "<group>"; };
 		42EAF1351ADD7BC70030E0E0 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		42EAF1381ADD7BC70030E0E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42EAF13A1ADD7BC70030E0E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				42EAF1311ADD7BC70030E0E0 /* AppDelegate.swift */,
-				42EAF1331ADD7BC70030E0E0 /* FirstViewController.swift */,
+				42EAF1331ADD7BC70030E0E0 /* WardrobeViewController.swift */,
 				42EAF1351ADD7BC70030E0E0 /* SecondViewController.swift */,
 				42EAF1371ADD7BC70030E0E0 /* Main.storyboard */,
 				42EAF13A1ADD7BC70030E0E0 /* Images.xcassets */,
@@ -217,7 +217,7 @@
 			files = (
 				42EAF1361ADD7BC70030E0E0 /* SecondViewController.swift in Sources */,
 				42EAF1321ADD7BC70030E0E0 /* AppDelegate.swift in Sources */,
-				42EAF1341ADD7BC70030E0E0 /* FirstViewController.swift in Sources */,
+				42EAF1341ADD7BC70030E0E0 /* WardrobeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +415,7 @@
 				42EAF14F1ADD7BC70030E0E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42EAF1501ADD7BC70030E0E0 /* Build configuration list for PBXNativeTarget "iSujaTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +424,7 @@
 				42EAF1521ADD7BC70030E0E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
