@@ -21,9 +21,9 @@ class WardrobeViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:WardrobeCell = self.tableView.dequeueReusableCellWithIdentifier("wardrobe") as! WardrobeCell
-        cell.imageCell = UIImageView
-        cell.textLabel = self.data[indexPath.row]
-        
+        cell.imageCell.image = UIImage(named: "calca.png")      
+        cell.nameLabel?.text = self.data[indexPath.row]
+        cell.usedTimesLabel?.text = "1"
         return cell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -44,7 +44,7 @@ class WardrobeViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "wardrobe")
+        //self.tableView.registerClass(WardrobeCell.self, forCellReuseIdentifier: "wardrobe")
     }
 
     override func didReceiveMemoryWarning() {

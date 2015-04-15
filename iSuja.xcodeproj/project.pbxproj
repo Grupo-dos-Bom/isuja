@@ -16,6 +16,7 @@
 		42EAF13E1ADD7BC70030E0E0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42EAF13C1ADD7BC70030E0E0 /* LaunchScreen.xib */; };
 		42EAF14A1ADD7BC70030E0E0 /* iSujaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EAF1491ADD7BC70030E0E0 /* iSujaTests.swift */; };
 		F58530671ADECCBB00594E83 /* WardrobeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58530661ADECCBB00594E83 /* WardrobeCell.swift */; };
+		F585306D1ADEDCF200594E83 /* Cloth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F585306C1ADEDCF200594E83 /* Cloth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		42EAF1481ADD7BC70030E0E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42EAF1491ADD7BC70030E0E0 /* iSujaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSujaTests.swift; sourceTree = "<group>"; };
 		F58530661ADECCBB00594E83 /* WardrobeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WardrobeCell.swift; sourceTree = "<group>"; };
+		F585306C1ADEDCF200594E83 /* Cloth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cloth.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		42EAF12E1ADD7BC70030E0E0 /* iSuja */ = {
 			isa = PBXGroup;
 			children = (
+				F585306C1ADEDCF200594E83 /* Cloth.swift */,
 				42B0B6C31ADDA23700F4EE47 /* DataManager.swift */,
 				42EAF1311ADD7BC70030E0E0 /* AppDelegate.swift */,
 				F58530661ADECCBB00594E83 /* WardrobeCell.swift */,
@@ -225,6 +228,7 @@
 				42B0B6C41ADDA23700F4EE47 /* DataManager.swift in Sources */,
 				F58530671ADECCBB00594E83 /* WardrobeCell.swift in Sources */,
 				42EAF1321ADD7BC70030E0E0 /* AppDelegate.swift in Sources */,
+				F585306D1ADEDCF200594E83 /* Cloth.swift in Sources */,
 				42EAF1341ADD7BC70030E0E0 /* WardrobeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
