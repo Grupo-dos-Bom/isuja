@@ -12,15 +12,15 @@ class Cloth {
     enum clothType {
         case trousers, shirt, underwearF, underwearM
     }
+    
     var name: String
     var image: String
     var usedTimes = 0
     var type: clothType
     
-    init (name:String, image:String, usedTimes:Int, type: clothType) {
+    init (_ name:String, _ image:String, _ type: clothType) {
         self.name = name
         self.image = image
-        self.usedTimes = usedTimes
         self.type = type
     }
     

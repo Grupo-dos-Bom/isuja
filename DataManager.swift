@@ -13,17 +13,31 @@ private let _DataManagerSharedInstance = DataManager()
 
 
 class DataManager {
-    var arrayClothes:[Cloth] = []
-    var cleanClothes:[String] = []
-    var dirtyClothes:[String] = ["Cueca cinza", "Meia branca", "Camiseta verde escuro"]
+    var cleanClothes:[Cloth] = []
+    var dirtyClothes:[Cloth] = []
+
     class var sharedInstance: DataManager {
         return _DataManagerSharedInstance
     }
     
     
     
-    func addCloth (name: String, image: String, usedTimes: Int, type: Cloth.clothType) {
-        let newCloth = Cloth (name: name, image: image, usedTimes: usedTimes, type: type)
-        arrayClothes.append(newCloth)
+    func addCloth (_ name: String, _ image: String, _ type: Cloth.clothType) {
+        let newCloth = Cloth (name,image,type)
+        cleanClothes.append(newCloth)
+    }
+    func putInLaundry (_ index: Int) {
+        dirtyClothes.append(cleanClothes[index])
+        cleanClothes.removeAtIndex(index)
+    }
+    func washCloth (_ index: Int) {
+        cleanClothes.append(cleanClothes[index])
+        dirtyClothes.removeAtIndex(index)
+    }
+    func getCleanCloth (_ index: Int) -> Cloth {
+        return cleanClothes[index]
+    }
+    func getDirtyCloth (_ index: Int) -> Cloth {
+        return dirtyClothes[index]
     }
 }
