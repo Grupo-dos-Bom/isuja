@@ -20,6 +20,17 @@ class LaundryViewController: UIViewController, UITableViewDataSource, UITableVie
         dataManager = DataManager.sharedInstance
     }
 
+    @IBAction func lavarButton(sender: AnyObject) {
+        let dirtyElements = dataManager.dirtyClothes.count
+        for i in 0..<dirtyElements {
+            var path = NSIndexPath.init(forRow: i, inSection: 0)
+            var cell = cestoTable.cellForRowAtIndexPath(path)
+            var nome:UILabel = cell!.viewWithTag(201) as! UILabel
+            println(nome.text)
+        }
+        cestoTable.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
