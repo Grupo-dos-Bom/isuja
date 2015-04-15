@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="590"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="65" id="CbV-6r-G6x" customClass="WardrobeCell" customModule="iSuja" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="wardrobe" rowHeight="65" id="CbV-6r-G6x" customClass="WardrobeCell" customModule="iSuja" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CbV-6r-G6x" id="hxz-Hq-ZTc">
@@ -36,16 +36,17 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nma-GI-nDP">
-                                                    <rect key="frame" x="321" y="17" width="30" height="30"/>
+                                                    <rect key="frame" x="345" y="17" width="30" height="30"/>
                                                     <state key="normal" title="+">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="add:" destination="CbV-6r-G6x" eventType="touchUpInside" id="Vcg-yR-63L"/>
+                                                        <action selector="increaseUsedTimes:" destination="CbV-6r-G6x" eventType="touchUpInside" id="6MJ-GE-veB"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIS-3c-KpS">
-                                                    <rect key="frame" x="295" y="21" width="15" height="21"/>
+                                                    <rect key="frame" x="322" y="21" width="15" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -53,9 +54,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="image" destination="R6U-yh-GH4" id="ImT-eA-Ccc"/>
-                                            <outlet property="imageView" destination="R6U-yh-GH4" id="305-Cu-8my"/>
-                                            <outlet property="name" destination="DTS-sg-Osd" id="9v4-aP-xC4"/>
+                                            <outlet property="imageCell" destination="R6U-yh-GH4" id="SIl-Jb-dt4"/>
+                                            <outlet property="nameLabel" destination="DTS-sg-Osd" id="M6K-Mr-Rch"/>
+                                            <outlet property="usedTimesLabel" destination="sIS-3c-KpS" id="7kX-ff-aZ6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

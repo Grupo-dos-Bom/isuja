@@ -11,10 +11,13 @@ import UIKit
 class WardrobeCell: UITableViewCell {
 
     
-    @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var imageCell: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var usedTimesLabel: UILabel!
     
 
+    @IBAction func increaseUsedTimes(sender: AnyObject) {
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
