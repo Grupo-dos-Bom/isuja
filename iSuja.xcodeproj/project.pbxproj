@@ -15,8 +15,7 @@
 		42EAF13B1ADD7BC70030E0E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42EAF13A1ADD7BC70030E0E0 /* Images.xcassets */; };
 		42EAF13E1ADD7BC70030E0E0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42EAF13C1ADD7BC70030E0E0 /* LaunchScreen.xib */; };
 		42EAF14A1ADD7BC70030E0E0 /* iSujaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EAF1491ADD7BC70030E0E0 /* iSujaTests.swift */; };
-		F58530671ADECCBB00594E83 /* WardrobeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58530661ADECCBB00594E83 /* WardrobeCell.swift */; };
-		F585306D1ADEDCF200594E83 /* Cloth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F585306C1ADEDCF200594E83 /* Cloth.swift */; };
+		5562A49A1ADEE50C00D4EBBF /* InsertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5562A4991ADEE50C00D4EBBF /* InsertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +41,7 @@
 		42EAF1431ADD7BC70030E0E0 /* iSujaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iSujaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42EAF1481ADD7BC70030E0E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42EAF1491ADD7BC70030E0E0 /* iSujaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSujaTests.swift; sourceTree = "<group>"; };
-		F58530661ADECCBB00594E83 /* WardrobeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WardrobeCell.swift; sourceTree = "<group>"; };
-		F585306C1ADEDCF200594E83 /* Cloth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cloth.swift; sourceTree = "<group>"; };
+		5562A4991ADEE50C00D4EBBF /* InsertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InsertViewController.swift; path = ../InsertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +89,7 @@
 				F58530661ADECCBB00594E83 /* WardrobeCell.swift */,
 				42EAF1331ADD7BC70030E0E0 /* WardrobeViewController.swift */,
 				42EAF1351ADD7BC70030E0E0 /* LaundryViewController.swift */,
+				5562A4991ADEE50C00D4EBBF /* InsertViewController.swift */,
 				42EAF1371ADD7BC70030E0E0 /* Main.storyboard */,
 				42EAF13A1ADD7BC70030E0E0 /* Images.xcassets */,
 				42EAF13C1ADD7BC70030E0E0 /* LaunchScreen.xib */,
@@ -228,7 +227,7 @@
 				42B0B6C41ADDA23700F4EE47 /* DataManager.swift in Sources */,
 				F58530671ADECCBB00594E83 /* WardrobeCell.swift in Sources */,
 				42EAF1321ADD7BC70030E0E0 /* AppDelegate.swift in Sources */,
-				F585306D1ADEDCF200594E83 /* Cloth.swift in Sources */,
+				5562A49A1ADEE50C00D4EBBF /* InsertViewController.swift in Sources */,
 				42EAF1341ADD7BC70030E0E0 /* WardrobeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
