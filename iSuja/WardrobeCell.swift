@@ -19,6 +19,12 @@ class WardrobeCell: UITableViewCell {
     @IBAction func increaseUsedTimes(sender: AnyObject) {
     }
     
+    func setCloth (_ currentCloth: Cloth) {
+        self.imageCell.image = UIImage(named: currentCloth.image)
+        self.nameLabel.text = currentCloth.name
+        self.usedTimesLabel.text = String(currentCloth.usedTimes)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
       // Initialization code

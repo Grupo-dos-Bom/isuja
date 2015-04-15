@@ -85,10 +85,10 @@
 		42EAF12E1ADD7BC70030E0E0 /* iSuja */ = {
 			isa = PBXGroup;
 			children = (
-				F585306C1ADEDCF200594E83 /* Cloth.swift */,
+				F517A2FA1ADEE849003B88DF /* WardrobeCell.swift */,
+				F517A2F81ADEE831003B88DF /* Cloth.swift */,
 				42B0B6C31ADDA23700F4EE47 /* DataManager.swift */,
 				42EAF1311ADD7BC70030E0E0 /* AppDelegate.swift */,
-				F58530661ADECCBB00594E83 /* WardrobeCell.swift */,
 				42EAF1331ADD7BC70030E0E0 /* WardrobeViewController.swift */,
 				42EAF1351ADD7BC70030E0E0 /* LaundryViewController.swift */,
 				5562A4991ADEE50C00D4EBBF /* InsertViewController.swift */,
@@ -227,7 +227,6 @@
 			files = (
 				42EAF1361ADD7BC70030E0E0 /* LaundryViewController.swift in Sources */,
 				42B0B6C41ADDA23700F4EE47 /* DataManager.swift in Sources */,
-				F58530671ADECCBB00594E83 /* WardrobeCell.swift in Sources */,
 				42EAF1321ADD7BC70030E0E0 /* AppDelegate.swift in Sources */,
 				F585306D1ADEDCF200594E83 /* Cloth.swift in Sources */,
 				42EAF1341ADD7BC70030E0E0 /* WardrobeViewController.swift in Sources */,
