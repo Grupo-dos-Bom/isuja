@@ -7,8 +7,24 @@
 //
 
 import UIKit
+import CoreImage
 
-class InsertViewController: UIViewController {
+class InsertViewController: UIViewController <UIImagePickerControllerDelegate> {
     
+
+    
+    
+    @IBAction func pickFromCam(sender: AnyObject) {
+        let mediaUI = UIImagePickerController();
+        mediaUI.sourceType = UIImagePickerControllerSourceTypeCamera;
+        mediaUI.delegate = self;
+        //[self presentViewController:mediaUI animated:YES completion:nil]
+        mediaUI.presentViewController.animated = YES;
+        self.mediaUI.presentViewController.completion = nil;
+    }
+    
+   
+    @IBAction func saveHandler(sender: AnyObject) {
+    }
     
 }

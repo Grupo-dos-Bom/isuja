@@ -20,7 +20,7 @@ class Cloth {
     }
     
     func increaseUsedTimes() {
-        self.usedtimes++;
+        self.usedTimes++;
     }
     
 }
