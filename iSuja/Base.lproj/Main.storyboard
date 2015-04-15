@@ -36,6 +36,26 @@
             </objects>
             <point key="canvasLocation" x="749.5" y="-320.5"/>
         </scene>
+        <!--Inserir-->
+        <scene sceneID="hvx-5K-TFR">
+            <objects>
+                <viewController id="4io-R2-fqZ" customClass="InsertViewController" customModule="iSuja" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pF5-QW-23P"/>
+                        <viewControllerLayoutGuide type="bottom" id="fMl-c7-lnG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sf1-UC-KQB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Inserir" id="UtM-Le-ta8"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PBy-v3-iit" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="219.5" y="971.5"/>
+        </scene>
         <!--Cesto-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
@@ -115,6 +135,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="4io-R2-fqZ" kind="relationship" relationship="viewControllers" id="CKk-3J-eEV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
