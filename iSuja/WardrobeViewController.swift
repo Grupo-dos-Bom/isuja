@@ -10,7 +10,7 @@ import UIKit
 
 class WardrobeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    // Table view methods
+    //============================================Table view methods
     @IBOutlet weak var tableView: UITableView!
     var data: [String] = ["Camisa","Calça","Cueca"]
     
@@ -20,8 +20,10 @@ class WardrobeViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
-        cell.textLabel?.text = self.data[indexPath.row]
+        var cell:WardrobeCell = self.tableView.dequeueReusableCellWithIdentifier("wardrobe") as! WardrobeCell
+        cell.imageCell.image = UIImage(named: "calca.png")      
+        cell.nameLabel?.text = self.data[indexPath.row]
+        cell.usedTimesLabel?.text = "1"
         return cell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -37,12 +39,12 @@ class WardrobeViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String! {
         return "Dirty"
     }
-    //----------------------
+    //============================================
     
+    
+    let dataManager = DataManager.sharedInstance
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
 
     override func didReceiveMemoryWarning() {
