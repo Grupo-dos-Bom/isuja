@@ -10,10 +10,13 @@ import UIKit
 
 class LaundryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet var cestoTable: UITableView!
+    
     var dataManager = DataManager.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         dataManager = DataManager.sharedInstance
     }
 
@@ -21,13 +24,15 @@ class LaundryViewController: UIViewController, UITableViewDataSource, UITableVie
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = cestoTable.dequeueReusableCellWithIdentifier("clothCesto", forIndexPath: indexPath) as! UITableViewCell
+        return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        dataManager.dirtyClothes.count
+        return dataManager.dirtyClothes.count
     }
 
 }
