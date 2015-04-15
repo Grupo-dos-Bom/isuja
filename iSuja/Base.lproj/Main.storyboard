@@ -52,7 +52,7 @@
                                 <rect key="frame" x="0.0" y="67" width="375" height="606"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="65" id="6WH-aW-NeH">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cestoCloth" rowHeight="65" id="6WH-aW-NeH">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6WH-aW-NeH" id="Slk-di-lw0">
@@ -63,6 +63,7 @@
                                                 </imageView>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="J0A-5W-YIh">
                                                     <rect key="frame" x="318" y="16" width="51" height="31"/>
+                                                    <accessibility key="accessibilityConfiguration" label="202"/>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="201" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dai-HT-m2s">
                                                     <rect key="frame" x="83" y="21" width="227" height="21"/>
@@ -74,6 +75,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="6tk-c7-dzF"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="33Q-W9-gaI"/>
+                                </connections>
                             </tableView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IqN-KI-2kn">
                                 <rect key="frame" x="319" y="28" width="51" height="31"/>
@@ -88,6 +93,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Cesto" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="cestoTable" destination="Cvb-Eu-CbB" id="qVZ-Qg-UZI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
