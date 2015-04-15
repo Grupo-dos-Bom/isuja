@@ -26,18 +26,18 @@ class DataManager {
         let newCloth = Cloth (name,image,type)
         cleanClothes.append(newCloth)
     }
-    func putInLaundry (_ row: Int) {
-        dirtyClothes.append(cleanClothes[row])
-        cleanClothes.removeAtIndex(row)
+    func putInLaundry (_ index: Int) {
+        dirtyClothes.append(cleanClothes[index])
+        cleanClothes.removeAtIndex(index)
     }
-    func washCloth (_ row: Int) {
-        cleanClothes.append(cleanClothes[row])
-        dirtyClothes.removeAtIndex(row)
+    func washCloth (_ index: Int) {
+        cleanClothes.append(cleanClothes[index])
+        dirtyClothes.removeAtIndex(index)
     }
-    func getCleanCloth (_ row: Int) -> Cloth {
-        return cleanClothes[row]
+    func getCleanCloth (_ index: Int) -> Cloth {
+        return cleanClothes[index]
     }
-    func getDirtyCloth (_ row: Int) -> Cloth {
-        return dirtyClothes[row]
+    func getDirtyCloth (_ index: Int) -> Cloth {
+        return dirtyClothes[index]
     }
 }

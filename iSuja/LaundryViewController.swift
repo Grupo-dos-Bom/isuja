@@ -74,9 +74,8 @@ class LaundryViewController: UIViewController, UITableViewDataSource, UITableVie
             var nome:UILabel = cell!.viewWithTag(201) as! UILabel
             var willLavar:UISwitch = cell!.viewWithTag(202) as! UISwitch
             if (willLavar.on) {
-                dataManager.cleanClothes.append(nome.text!)
-                dataManager.dirtyClothes.removeAtIndex(i)
-                willLavar.setOn(false, animated:false)
+                dataManager.washCloth(i)
+               willLavar.setOn(false, animated:false)
             }
         }
         cestoTable.reloadData()
@@ -112,7 +111,8 @@ class LaundryViewController: UIViewController, UITableViewDataSource, UITableVie
         let cell = cestoTable.dequeueReusableCellWithIdentifier("cestoCloth", forIndexPath: indexPath) as! UITableViewCell
         let row = indexPath.row
         var nome:UILabel = cell.viewWithTag(201) as! UILabel
-        nome.text = dataManager.dirtyClothes[row]
+        let c: Cloth = dataManager.getDirtyCloth(row)
+        nome.text = c.name
         return cell
     }
     

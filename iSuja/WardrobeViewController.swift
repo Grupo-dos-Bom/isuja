@@ -49,7 +49,8 @@ class WardrobeViewController: UIViewController, UITableViewDataSource, UITableVi
         dataManager.addCloth("camisa restart", "calca.png", Cloth.clothType.shirt)
         dataManager.addCloth("cueca rosa", "calca.png", Cloth.clothType.shirt)
         dataManager.addCloth("calca azul", "calca.png", Cloth.clothType.shirt)
-
+        let newCloth = Cloth ("suja","calca.png",Cloth.clothType.shirt)
+        dataManager.dirtyClothes.append(newCloth)
 
     }
 
