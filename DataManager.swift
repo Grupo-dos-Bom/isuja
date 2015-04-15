@@ -17,7 +17,7 @@ private let _DataManagerSharedInstance = DataManager()
 
 class DataManager {
     var cleanClothes:[String] = []
-    var dirtyClothes:[String] = []
+    var dirtyClothes:[String] = ["Cueca cinza", "Meia branca", "Camiseta verde escuro"]
     class var sharedInstance: DataManager {
         return _DataManagerSharedInstance
     }

@@ -25,9 +25,15 @@ class LaundryViewController: UIViewController, UITableViewDataSource, UITableVie
         // Dispose of any resources that can be recreated.
     }
 
+    override func viewWillAppear(animated: Bool) {
+        cestoTable.reloadData()
+    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = cestoTable.dequeueReusableCellWithIdentifier("clothCesto", forIndexPath: indexPath) as! UITableViewCell
+        let cell = cestoTable.dequeueReusableCellWithIdentifier("cestoCloth", forIndexPath: indexPath) as! UITableViewCell
+        let row = indexPath.row
+        var nome:UILabel = cell.viewWithTag(201) as! UILabel
+        nome.text = dataManager.dirtyClothes[row]
         return cell
     }
     
@@ -36,4 +42,3 @@ class LaundryViewController: UIViewController, UITableViewDataSource, UITableVie
     }
 
 }
-
