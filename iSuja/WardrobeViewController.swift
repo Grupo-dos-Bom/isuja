@@ -10,7 +10,7 @@ import UIKit
 
 class WardrobeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    // Table view methods
+    //============================================Table view methods
     @IBOutlet weak var tableView: UITableView!
     var data: [String] = ["Camisa","Calça","Cueca"]
     
@@ -39,12 +39,12 @@ class WardrobeViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String! {
         return "Dirty"
     }
-    //----------------------
+    //============================================
     
+    
+    let dataManager = DataManager.sharedInstance
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //self.tableView.registerClass(WardrobeCell.self, forCellReuseIdentifier: "wardrobe")
     }
 
     override func didReceiveMemoryWarning() {
