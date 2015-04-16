@@ -87,6 +87,7 @@ class LaundryViewController: UIViewController, UITableViewDataSource, UITableVie
     }
 
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         cestoTable.reloadData()
         let dirtyElements = dataManager.dirtyClothes.count
         var flagAllOn = true
