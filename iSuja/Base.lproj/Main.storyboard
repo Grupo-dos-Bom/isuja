@@ -41,7 +41,6 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="add:" destination="CbV-6r-G6x" eventType="touchUpInside" id="Vcg-yR-63L"/>
                                                         <action selector="increaseUsedTimes:" destination="CbV-6r-G6x" eventType="touchUpInside" id="6MJ-GE-veB"/>
                                                     </connections>
                                                 </button>
