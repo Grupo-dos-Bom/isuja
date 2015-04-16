@@ -9,16 +9,17 @@
 import Foundation
 
 class Cloth {
-    enum clothType {
-        case trousers, shirt, underwearF, underwearM
-    }
-    
     var name: String
     var image: String
     var usedTimes = 0
     var type: clothType
     
-    init (_ name:String, _ image:String, _ type: clothType) {
+    enum clothType {
+        case trousers, shirt, underwearF, underwearM
+    }
+
+    
+    init (name:String, image:String, type: clothType) {
         self.name = name
         self.image = image
         self.type = type
@@ -26,6 +27,10 @@ class Cloth {
     
     func increaseUsedTimes() {
         self.usedTimes++;
+    }
+    
+    func washCloth () {
+        self.usedTimes = 0;
     }
     
 }
