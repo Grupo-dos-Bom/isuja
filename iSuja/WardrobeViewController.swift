@@ -33,6 +33,7 @@ class WardrobeViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == UITableViewCellEditingStyle.Delete {
+            dataManager.putInLaundry(indexPath.row)
             self.data.removeAtIndex(indexPath.row)
             self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
         }
@@ -49,7 +50,7 @@ class WardrobeViewController: UIViewController, UITableViewDataSource, UITableVi
         dataManager.addCloth("camisa restart", "calca.png", Cloth.clothType.shirt)
         dataManager.addCloth("cueca rosa", "calca.png", Cloth.clothType.shirt)
         dataManager.addCloth("calca azul", "calca.png", Cloth.clothType.shirt)
-        let newCloth = Cloth ("suja","calca.png",Cloth.clothType.shirt)
+        let newCloth = Cloth (name: "suja",image: "calca.png",type: Cloth.clothType.shirt)
         dataManager.dirtyClothes.append(newCloth)
 
     }

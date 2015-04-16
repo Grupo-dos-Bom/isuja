@@ -23,7 +23,7 @@ class DataManager {
     
     
     func addCloth (name: String, _ image: String, _ type: Cloth.clothType) {
-        let newCloth = Cloth (name,image,type)
+        let newCloth = Cloth(name: name, image: image, type: type)
         cleanClothes.append(newCloth)
     }
     func putInLaundry (index: Int) {
@@ -31,7 +31,8 @@ class DataManager {
         cleanClothes.removeAtIndex(index)
     }
     func washCloth (index: Int) {
-        cleanClothes.append(cleanClothes[index])
+        dirtyClothes[index].washCloth()
+        cleanClothes.append(dirtyClothes[index])
         dirtyClothes.removeAtIndex(index)
     }
     func getCleanCloth (index: Int) -> Cloth {
