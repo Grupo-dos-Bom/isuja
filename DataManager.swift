@@ -22,22 +22,22 @@ class DataManager {
     
     
     
-    func addCloth (_ name: String, _ image: String, _ type: Cloth.clothType) {
+    func addCloth (name: String, _ image: String, _ type: Cloth.clothType) {
         let newCloth = Cloth (name,image,type)
         cleanClothes.append(newCloth)
     }
-    func putInLaundry (_ index: Int) {
+    func putInLaundry (index: Int) {
         dirtyClothes.append(cleanClothes[index])
         cleanClothes.removeAtIndex(index)
     }
-    func washCloth (_ index: Int) {
+    func washCloth (index: Int) {
         cleanClothes.append(cleanClothes[index])
         dirtyClothes.removeAtIndex(index)
     }
-    func getCleanCloth (_ index: Int) -> Cloth {
+    func getCleanCloth (index: Int) -> Cloth {
         return cleanClothes[index]
     }
-    func getDirtyCloth (_ index: Int) -> Cloth {
+    func getDirtyCloth (index: Int) -> Cloth {
         return dirtyClothes[index]
     }
 }
