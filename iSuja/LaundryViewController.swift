@@ -87,6 +87,7 @@ class LaundryViewController: UIViewController, UITableViewDataSource, UITableVie
     }
 
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         cestoTable.reloadData()
         let dirtyElements = dataManager.dirtyClothes.count
         var flagAllOn = true
@@ -110,9 +111,11 @@ class LaundryViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = cestoTable.dequeueReusableCellWithIdentifier("cestoCloth", forIndexPath: indexPath) as! UITableViewCell
         let row = indexPath.row
-        var nome:UILabel = cell.viewWithTag(201) as! UILabel
         let c: Cloth = dataManager.getDirtyCloth(row)
+        let nome:UILabel = cell.viewWithTag(201) as! UILabel
+        let imagem:UIImageView = cell.viewWithTag(200) as! UIImageView
         nome.text = c.name
+        imagem.image = UIImage(named: c.image)
         return cell
     }
     
