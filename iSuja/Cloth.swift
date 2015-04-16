@@ -6,23 +6,25 @@
 //  Copyright (c) 2015 Grupo dos Bom. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Cloth {
     var name: String
     var image: String
+    var color: UIColor
     var usedTimes = 0
     var type: clothType
     
     enum clothType {
-        case trousers, shirt, underwearF, underwearM
+        case trousers, shirt, socks
     }
 
     
-    init (name:String, image:String, type: clothType) {
+    init (name:String, image:String, type: clothType, color: UIColor) {
         self.name = name
         self.image = image
         self.type = type
+        self.color = color
     }
     
     func increaseUsedTimes() {

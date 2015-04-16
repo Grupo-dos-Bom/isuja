@@ -51,10 +51,10 @@ class WardrobeViewController: UIViewController, UITableViewDataSource, UITableVi
     let dataManager = DataManager.sharedInstance
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataManager.addCloth("camisa restart", "calca.png", Cloth.clothType.shirt)
-        dataManager.addCloth("cueca rosa", "calca.png", Cloth.clothType.shirt)
-        dataManager.addCloth("calca azul", "calca.png", Cloth.clothType.shirt)
-        let newCloth = Cloth (name: "suja",image: "calca.png",type: Cloth.clothType.shirt)
+        dataManager.addCloth("camisa roxa", image: "camisa.png", type: Cloth.clothType.shirt, color: UIColor.purpleColor())
+        dataManager.addCloth("meia verde", image: "meia.png", type: Cloth.clothType.shirt, color: UIColor.greenColor())
+        dataManager.addCloth("calca azul", image: "calca.png", type: Cloth.clothType.shirt, color: UIColor.blueColor())
+        let newCloth = Cloth (name: "suja",image: "calca.png",type: Cloth.clothType.shirt, color: UIColor.blackColor())
         dataManager.dirtyClothes.append(newCloth)
 
     }
