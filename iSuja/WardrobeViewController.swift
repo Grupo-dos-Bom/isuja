@@ -12,11 +12,10 @@ class WardrobeViewController: UIViewController, UITableViewDataSource, UITableVi
 
     //============================================Table view methods
     @IBOutlet weak var tableView: UITableView!
-    var data: [String] = ["Camisa","Calça","Cueca"]
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.data.count
+        return self.dataManager.cleanClothes.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -28,18 +27,23 @@ class WardrobeViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("Clicou em: #\(self.data[indexPath.row])!")
+        //println("Clicou em: #\(self.data[indexPath.row])!")
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == UITableViewCellEditingStyle.Delete {
             dataManager.putInLaundry(indexPath.row)
-            self.data.removeAtIndex(indexPath.row)
             self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
         }
     }
     func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String! {
         return "Dirty"
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+         tableView.reloadData()
+        
     }
     //============================================
     
