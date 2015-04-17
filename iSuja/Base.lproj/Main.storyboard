@@ -128,19 +128,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descrição" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k31-IC-uzi">
-                                <rect key="frame" x="16" y="442" width="343" height="30"/>
+                                <rect key="frame" x="10" y="373" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U37-7f-qza">
-                                <rect key="frame" x="144" y="365" width="87" height="50"/>
-                                <state key="normal" image="photo">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pickFromCam:" destination="s7W-Lg-28w" eventType="touchUpInside" id="aaf-o3-2YB"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mT9-qh-lW8">
                                 <rect key="frame" x="67" y="51" width="240" height="306"/>
                             </imageView>
@@ -152,6 +143,7 @@
                                 </state>
                                 <connections>
                                     <action selector="saveHandler:" destination="s7W-Lg-28w" eventType="touchUpInside" id="l9D-Tv-7xj"/>
+                                    <segue destination="49e-Tb-3d3" kind="show" id="oAt-ep-tJA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rk-E6-H50">
@@ -162,6 +154,15 @@
                                 </state>
                                 <connections>
                                     <segue destination="49e-Tb-3d3" kind="show" id="kaN-Eq-uAv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U37-7f-qza">
+                                <rect key="frame" x="144" y="434" width="87" height="50"/>
+                                <state key="normal" image="photo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pickFromCam:" destination="s7W-Lg-28w" eventType="touchUpInside" id="aaf-o3-2YB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -283,4 +284,7 @@
         <image name="calca" width="37" height="32"/>
         <image name="photo" width="50" height="50"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="oAt-ep-tJA"/>
+    </inferredMetricsTieBreakers>
 </document>

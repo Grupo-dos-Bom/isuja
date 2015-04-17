@@ -25,6 +25,7 @@ class InsertViewController: UIViewController, UIImagePickerControllerDelegate , 
         
         super.viewDidLoad();
         
+        self.saveButton.hidden = true;
         self.nameTextField.delegate = self;
     }
     
@@ -48,6 +49,8 @@ class InsertViewController: UIViewController, UIImagePickerControllerDelegate , 
         
         self.dismissViewControllerAnimated(true, completion: nil)
         imageField.image = image
+        
+        self.saveButton.hidden = false;
     }
    
     @IBAction func saveHandler(sender: AnyObject) {
