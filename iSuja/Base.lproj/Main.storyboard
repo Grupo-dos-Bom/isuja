@@ -43,8 +43,9 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nma-GI-nDP">
-                                                    <rect key="frame" x="340" y="27" width="35" height="30"/>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nma-GI-nDP">
+                                                    <rect key="frame" x="340" y="25" width="35" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                                     <state key="normal" title="+">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -60,15 +61,16 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Nma-GI-nDP" firstAttribute="baseline" secondItem="sIS-3c-KpS" secondAttribute="baseline" id="3uY-8N-ZXv"/>
+                                                <constraint firstItem="Nma-GI-nDP" firstAttribute="baseline" secondItem="sIS-3c-KpS" secondAttribute="baseline" constant="4" id="3uY-8N-ZXv"/>
                                                 <constraint firstAttribute="trailing" secondItem="Nma-GI-nDP" secondAttribute="trailing" id="B43-xl-DlV"/>
-                                                <constraint firstItem="DTS-sg-Osd" firstAttribute="baseline" secondItem="sIS-3c-KpS" secondAttribute="baseline" id="TRV-XU-zgr"/>
+                                                <constraint firstAttribute="centerY" secondItem="DTS-sg-Osd" secondAttribute="centerY" id="UYJ-OL-TNL"/>
+                                                <constraint firstAttribute="centerX" secondItem="DTS-sg-Osd" secondAttribute="centerX" id="VPM-OF-OHH"/>
                                                 <constraint firstItem="R6U-yh-GH4" firstAttribute="leading" secondItem="hxz-Hq-ZTc" secondAttribute="leading" id="XIf-52-v8E"/>
                                                 <constraint firstItem="R6U-yh-GH4" firstAttribute="top" secondItem="hxz-Hq-ZTc" secondAttribute="topMargin" constant="2" id="Y5K-lz-AUp"/>
                                                 <constraint firstItem="sIS-3c-KpS" firstAttribute="leading" secondItem="DTS-sg-Osd" secondAttribute="trailing" constant="12" id="adc-yl-sKx"/>
                                                 <constraint firstItem="DTS-sg-Osd" firstAttribute="leading" secondItem="R6U-yh-GH4" secondAttribute="trailing" constant="8" symbolic="YES" id="mVv-eX-4Tx"/>
                                                 <constraint firstItem="Nma-GI-nDP" firstAttribute="baseline" secondItem="DTS-sg-Osd" secondAttribute="baseline" id="ofa-gE-Iol"/>
-                                                <constraint firstItem="R6U-yh-GH4" firstAttribute="centerY" secondItem="Nma-GI-nDP" secondAttribute="centerY" id="r8B-no-Q5c"/>
+                                                <constraint firstItem="R6U-yh-GH4" firstAttribute="centerY" secondItem="Nma-GI-nDP" secondAttribute="centerY" constant="2" id="r8B-no-Q5c"/>
                                                 <constraint firstItem="DTS-sg-Osd" firstAttribute="leading" secondItem="R6U-yh-GH4" secondAttribute="trailing" constant="8" symbolic="YES" id="vqI-qD-wmM"/>
                                                 <constraint firstItem="Nma-GI-nDP" firstAttribute="leading" secondItem="sIS-3c-KpS" secondAttribute="trailing" constant="8" symbolic="YES" id="yI0-va-6jh"/>
                                             </constraints>
@@ -269,8 +271,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Save" width="25" height="25"/>
+        <image name="Wardrobe" width="25" height="25"/>
+        <image name="basket" width="25" height="25"/>
         <image name="calca" width="37" height="32"/>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
     </resources>
 </document>

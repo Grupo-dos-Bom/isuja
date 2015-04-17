@@ -28,7 +28,7 @@ class InsertViewController: UIViewController, UIImagePickerControllerDelegate , 
         mediaUI.sourceType = UIImagePickerControllerSourceType.Camera;
         mediaUI.allowsEditing = false;
         
-        self.imageField.image = (UIImage*) [info, objectForKey:UIImagePickerControllerOriginalImage];
+       // self.imageField.image = (UIImage*) [info, objectForKey:UIImagePickerControllerOriginalImage];
         
         //self.presentViewController(mediaUI, animated: true, completion: nil);
     }

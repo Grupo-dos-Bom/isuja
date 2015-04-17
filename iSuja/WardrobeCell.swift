@@ -39,12 +39,14 @@ class WardrobeCell: UITableViewCell {
         self.imageCell.backgroundColor = currentCloth.color
         self.nameLabel.text = currentCloth.name
         self.usedTimesLabel.text = String(currentCloth.usedTimes)
-        
         if(style == buttonStyle.removeCell) {
-            
-            UIView.animateWithDuration(0.5, animations: {
+            let time: NSTimeInterval = 0.3
+            self.increaseButton.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
+            UIView.animateWithDuration(time, animations: {
+                self.increaseButton.transform = CGAffineTransformRotate(CGAffineTransformIdentity, CGFloat(M_PI/4))
+                return
             })
-        }
+            }
     }
     
     override func awakeFromNib() {
