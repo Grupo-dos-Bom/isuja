@@ -12,7 +12,7 @@ class WardrobeViewController: UIViewController, UITableViewDataSource, UITableVi
 
     //============================================Table view methods
     @IBOutlet weak var tableView: UITableView!
-    
+    var style: WardrobeCell.buttonStyle = WardrobeCell.buttonStyle.add
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.dataManager.cleanClothes.count
@@ -22,8 +22,8 @@ class WardrobeViewController: UIViewController, UITableViewDataSource, UITableVi
         var cell:WardrobeCell = self.tableView.dequeueReusableCellWithIdentifier("wardrobe") as! WardrobeCell
         
         var currentCloth: Cloth = dataManager.getCleanCloth(indexPath.row)
+        cell.style = style
         cell.setCloth(currentCloth)
-        
         return cell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -45,7 +45,23 @@ class WardrobeViewController: UIViewController, UITableViewDataSource, UITableVi
          tableView.reloadData()
         
     }
+    
+    @IBAction func editTable(sender: UIButton) {
+        if(sender.titleLabel!.text == "Remove") {
+            sender.setTitle("Done", forState: UIControlState.Normal)
+            self.style = WardrobeCell.buttonStyle.removeCell
+        }
+        else {
+            sender.setTitle("Remove", forState: UIControlState.Normal)
+            self.style = WardrobeCell.buttonStyle.add
+        }
+        tableView.reloadData()
+    }
     //============================================
+    
+   
+ 
+    
     
     
     let dataManager = DataManager.sharedInstance
