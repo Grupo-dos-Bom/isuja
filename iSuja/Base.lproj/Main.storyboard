@@ -82,7 +82,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Guarda-Roupas" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Guarda-Roupas" image="Wardrobe" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="tableView" destination="i1j-Q9-ktn" id="z8b-kr-iU5"/>
                     </connections>
@@ -124,7 +124,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Inserir" id="UtM-Le-ta8"/>
+                    <tabBarItem key="tabBarItem" title="Inserir" image="Save" id="UtM-Le-ta8"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="descriptionTextField" destination="k31-IC-uzi" id="fgX-DJ-0pN"/>
@@ -203,7 +203,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Cesto" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Cesto" image="basket" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="allSwitcher" destination="mKS-jY-o2g" id="qJI-2A-A9b"/>
                         <outlet property="cestoTable" destination="Cvb-Eu-CbB" id="qVZ-Qg-UZI"/>
@@ -236,8 +236,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="calca" width="75" height="64"/>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="Save" width="25" height="25"/>
+        <image name="Wardrobe" width="25" height="25"/>
+        <image name="basket" width="25" height="25"/>
+        <image name="calca" width="37" height="32"/>
     </resources>
 </document>
