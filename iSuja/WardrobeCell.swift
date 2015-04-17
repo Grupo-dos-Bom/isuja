@@ -42,7 +42,8 @@ class WardrobeCell: UITableViewCell {
         
         if(style == buttonStyle.removeCell) {
             
-            UIView.animateWithDuration(0.5, animations: {})
+            UIView.animateWithDuration(0.5, animations: {
+            })
         }
     }
     
