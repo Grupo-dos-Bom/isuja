@@ -115,7 +115,7 @@ class LaundryViewController: UIViewController, UITableViewDataSource, UITableVie
         let nome:UILabel = cell.viewWithTag(201) as! UILabel
         let imagem:UIImageView = cell.viewWithTag(200) as! UIImageView
         nome.text = c.name
-        imagem.image = UIImage(named: c.image)
+        imagem.image = c.image
         return cell
     }
     

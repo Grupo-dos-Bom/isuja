@@ -160,7 +160,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9pv-A4-QxB" kind="show" id="1f9-yQ-u4u"/>
+                                    <segue destination="49e-Tb-3d3" kind="show" id="kaN-Eq-uAv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8D-VF-RNw">
@@ -292,7 +292,4 @@
         <image name="calca" width="37" height="32"/>
         <image name="photo" width="50" height="50"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="1f9-yQ-u4u"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -22,7 +22,7 @@ class DataManager {
     
     
 
-    func addCloth (name: String, image: String, type: Cloth.clothType, color: UIColor) {
+    func addCloth (name: String, image: UIImage, type: Cloth.clothType, color: UIColor) {
         let newCloth = Cloth(name: name, image: image, type: type, color: color)
         cleanClothes.append(newCloth)
     }
