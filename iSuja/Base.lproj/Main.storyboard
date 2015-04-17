@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="84" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="i1j-Q9-ktn">
-                                <rect key="frame" x="0.0" y="28" width="375" height="590"/>
+                                <rect key="frame" x="0.0" y="67" width="375" height="590"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="wardrobe" rowHeight="84" id="CbV-6r-G6x" customClass="WardrobeCell" customModule="iSuja" customModuleProvider="target">
@@ -34,14 +34,18 @@
                                                         <constraint firstAttribute="height" constant="64" id="y9d-P7-pEi"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="201" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTS-sg-Osd">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="201" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTS-sg-Osd">
                                                     <rect key="frame" x="83" y="31" width="227" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="227" id="poK-ml-l5E"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nma-GI-nDP">
-                                                    <rect key="frame" x="345" y="27" width="30" height="30"/>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nma-GI-nDP">
+                                                    <rect key="frame" x="340" y="25" width="35" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                                     <state key="normal" title="+">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -49,28 +53,37 @@
                                                         <action selector="increaseUsedTimes:" destination="CbV-6r-G6x" eventType="touchUpInside" id="6MJ-GE-veB"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIS-3c-KpS">
-                                                    <rect key="frame" x="322" y="31" width="15" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIS-3c-KpS">
+                                                    <rect key="frame" x="322" y="31" width="10" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Nma-GI-nDP" firstAttribute="baseline" secondItem="sIS-3c-KpS" secondAttribute="baseline" id="3uY-8N-ZXv"/>
+                                                <constraint firstItem="Nma-GI-nDP" firstAttribute="baseline" secondItem="sIS-3c-KpS" secondAttribute="baseline" constant="4" id="3uY-8N-ZXv"/>
                                                 <constraint firstAttribute="trailing" secondItem="Nma-GI-nDP" secondAttribute="trailing" id="B43-xl-DlV"/>
                                                 <constraint firstAttribute="centerY" secondItem="DTS-sg-Osd" secondAttribute="centerY" id="UYJ-OL-TNL"/>
                                                 <constraint firstAttribute="centerX" secondItem="DTS-sg-Osd" secondAttribute="centerX" id="VPM-OF-OHH"/>
                                                 <constraint firstItem="R6U-yh-GH4" firstAttribute="leading" secondItem="hxz-Hq-ZTc" secondAttribute="leading" id="XIf-52-v8E"/>
                                                 <constraint firstItem="R6U-yh-GH4" firstAttribute="top" secondItem="hxz-Hq-ZTc" secondAttribute="topMargin" constant="2" id="Y5K-lz-AUp"/>
+                                                <constraint firstItem="sIS-3c-KpS" firstAttribute="leading" secondItem="DTS-sg-Osd" secondAttribute="trailing" constant="12" id="adc-yl-sKx"/>
                                                 <constraint firstItem="DTS-sg-Osd" firstAttribute="leading" secondItem="R6U-yh-GH4" secondAttribute="trailing" constant="8" symbolic="YES" id="mVv-eX-4Tx"/>
                                                 <constraint firstItem="Nma-GI-nDP" firstAttribute="baseline" secondItem="DTS-sg-Osd" secondAttribute="baseline" id="ofa-gE-Iol"/>
-                                                <constraint firstItem="R6U-yh-GH4" firstAttribute="centerY" secondItem="Nma-GI-nDP" secondAttribute="centerY" id="r8B-no-Q5c"/>
+                                                <constraint firstItem="R6U-yh-GH4" firstAttribute="centerY" secondItem="Nma-GI-nDP" secondAttribute="centerY" constant="2" id="r8B-no-Q5c"/>
+                                                <constraint firstItem="DTS-sg-Osd" firstAttribute="leading" secondItem="R6U-yh-GH4" secondAttribute="trailing" constant="8" symbolic="YES" id="vqI-qD-wmM"/>
                                                 <constraint firstItem="Nma-GI-nDP" firstAttribute="leading" secondItem="sIS-3c-KpS" secondAttribute="trailing" constant="8" symbolic="YES" id="yI0-va-6jh"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="mVv-eX-4Tx"/>
+                                                    <exclude reference="ofa-gE-Iol"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="imageCell" destination="R6U-yh-GH4" id="SIl-Jb-dt4"/>
+                                            <outlet property="increaseButton" destination="Nma-GI-nDP" id="0XT-Wa-iYX"/>
                                             <outlet property="nameLabel" destination="DTS-sg-Osd" id="M6K-Mr-Rch"/>
                                             <outlet property="usedTimesLabel" destination="sIS-3c-KpS" id="7kX-ff-aZ6"/>
                                         </connections>
@@ -81,6 +94,21 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="fyi-1T-znd"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yc-gL-QIl">
+                                <rect key="frame" x="16" y="29" width="57" height="30"/>
+                                <state key="normal" title="Remove">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="editTable:" destination="9pv-A4-QxB" eventType="touchUpInside" id="5Ja-FS-pii"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERv-ZD-WMS">
+                                <rect key="frame" x="313" y="29" width="39" height="30"/>
+                                <state key="normal" title="Insert">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
