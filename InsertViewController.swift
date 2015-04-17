@@ -16,7 +16,6 @@ class InsertViewController: UIViewController, UIImagePickerControllerDelegate , 
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var imageField: UIImageView!
     
-    
     let dataManager = DataManager.sharedInstance
     
     @IBAction func pickFromCam(sender: AnyObject) {
@@ -27,11 +26,13 @@ class InsertViewController: UIViewController, UIImagePickerControllerDelegate , 
         
         mediaUI.sourceType = UIImagePickerControllerSourceType.Camera;
         mediaUI.allowsEditing = false;
+        mediaUI.cameraCaptureMode = .Photo
         
-        self.imageField.image = (UIImage*) [info, objectForKey:UIImagePickerControllerOriginalImage];
+        let image = mediaUI[UIImagePickerControllerOriginalImage] as UIImage
         
-        //self.presentViewController(mediaUI, animated: true, completion: nil);
+         self.presentViewController(mediaUI, animated: true, completion: nil)
     }
+    
     
    
     @IBAction func saveHandler(sender: AnyObject) {
