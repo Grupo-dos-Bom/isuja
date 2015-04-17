@@ -94,18 +94,9 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="fyi-1T-znd"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yc-gL-QIl">
-                                <rect key="frame" x="16" y="29" width="57" height="30"/>
-                                <state key="normal" title="Remove">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="editTable:" destination="9pv-A4-QxB" eventType="touchUpInside" id="5Ja-FS-pii"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERv-ZD-WMS">
-                                <rect key="frame" x="313" y="29" width="39" height="30"/>
-                                <state key="normal" title="Insert">
+                                <rect key="frame" x="307" y="29" width="45" height="30"/>
+                                <state key="normal" title="Inserir">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>

@@ -35,7 +35,6 @@ class WardrobeCell: UITableViewCell {
     func setCloth (currentCloth: Cloth) {
         self.cellCloth = currentCloth
         self.imageCell.image = currentCloth.image
-        self.imageCell.backgroundColor = currentCloth.color
         self.nameLabel.text = currentCloth.name
         self.usedTimesLabel.text = String(currentCloth.usedTimes)
     }

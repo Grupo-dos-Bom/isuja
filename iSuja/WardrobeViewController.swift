@@ -29,11 +29,11 @@ class WardrobeViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
         
-        let laundryAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Laundry", handler: { (action:UITableViewRowAction!,indexPath:NSIndexPath!) -> Void in
+        let laundryAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Cesto", handler: { (action:UITableViewRowAction!,indexPath:NSIndexPath!) -> Void in
         self.dataManager.putInLaundry(indexPath.row)
         self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
         })
-        let deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Delete", handler: { (action:UITableViewRowAction!,indexPath:NSIndexPath!) -> Void in
+        let deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Excluir", handler: { (action:UITableViewRowAction!,indexPath:NSIndexPath!) -> Void in
             self.dataManager.removeCleanCloth(indexPath.row)
             self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
         })
@@ -47,7 +47,7 @@ class WardrobeViewController: UIViewController, UITableViewDataSource, UITableVi
         //nothing
     }
     func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String! {
-        return "Laundry"
+        return "Lavar"
     }
     
     func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
@@ -59,17 +59,7 @@ class WardrobeViewController: UIViewController, UITableViewDataSource, UITableVi
         
     }
     
-    @IBAction func editTable(sender: UIButton) {
-        if(sender.titleLabel!.text == "Remove") {
-            sender.setTitle("Done", forState: UIControlState.Normal)
-            tableView.setEditing(true, animated: true)
-        }
-        else {
-            sender.setTitle("Remove", forState: UIControlState.Normal)
-            tableView.setEditing(false, animated: true)
-        }
-        tableView.reloadData()
-    }
+    
     
     //============================================
     
@@ -82,7 +72,7 @@ class WardrobeViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dataManager.addCloth("camisa roxa", image: UIImage(named: "camisa.png")!, type: Cloth.clothType.shirt, color: UIColor.purpleColor())
+        
         /*dataManager.addCloth("meia verde", image: "meia.png", type: Cloth.clothType.shirt, color: UIColor.greenColor())
         dataManager.addCloth("calca azul", image: "calca.png", type: Cloth.clothType.shirt, color: UIColor.blueColor())
         let newCloth = Cloth (name: "suja",image: "calca.png",type: Cloth.clothType.shirt, color: UIColor.blackColor()) */

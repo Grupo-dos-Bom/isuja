@@ -55,7 +55,7 @@ class InsertViewController: UIViewController, UIImagePickerControllerDelegate , 
         let color = UIColor.blackColor();
         //let imagePath = String("/Users/davirdgs/Documents/iSuja/isuja/iSuja icons/Socks.png");
         
-        dataManager.addCloth(name,image: pickedImage, type: Cloth.clothType.shirt,color: color)
+        dataManager.addCloth(name,image: pickedImage)
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {

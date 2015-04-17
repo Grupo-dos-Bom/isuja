@@ -15,6 +15,8 @@ private let _DataManagerSharedInstance = DataManager()
 class DataManager {
     var cleanClothes:[Cloth] = []
     var dirtyClothes:[Cloth] = []
+    //let c = Cloth(name: "jaqueta", image: UIImage(named: "jaqueta.png"))
+    
 
     class var sharedInstance: DataManager {
         return _DataManagerSharedInstance
@@ -22,8 +24,8 @@ class DataManager {
     
     
 
-    func addCloth (name: String, image: UIImage, type: Cloth.clothType, color: UIColor) {
-        let newCloth = Cloth(name: name, image: image, type: type, color: color)
+    func addCloth (name: String, image: UIImage) {
+        let newCloth = Cloth(name: name, image: image)
         cleanClothes.append(newCloth)
     }
     func putInLaundry (index: Int) {
