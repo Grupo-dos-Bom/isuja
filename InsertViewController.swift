@@ -15,12 +15,15 @@ class InsertViewController: UIViewController, UIImagePickerControllerDelegate , 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var imageField: UIImageView!
+    var mediaUI = UIImagePickerController();
     
     let dataManager = DataManager.sharedInstance
     
+    var pickedImage : UIImage!
+    
     @IBAction func pickFromCam(sender: AnyObject) {
         
-        var mediaUI = UIImagePickerController();
+        
         mediaUI.delegate = self;
         mediaUI.mediaTypes = [kUTTypeImage];
         
@@ -28,17 +31,29 @@ class InsertViewController: UIViewController, UIImagePickerControllerDelegate , 
         mediaUI.allowsEditing = false;
         mediaUI.cameraCaptureMode = .Photo
         
-        let image = mediaUI[UIImagePickerControllerOriginalImage] as UIImage
+        //let image = mediaUI[UIImagePickerControllerOriginalImage] as UIImage
         
          self.presentViewController(mediaUI, animated: true, completion: nil)
     }
     
-    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        pickedImage = image
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+        imageField.image = image
+    }
    
     @IBAction func saveHandler(sender: AnyObject) {
         var name = nameTextField.text;
         let color = UIColor.blackColor();
         let imagePath = String("/Users/davirdgs/Documents/iSuja/isuja/iSuja icons/Socks.png");
+        
         dataManager.addCloth(name,image: imagePath,type: Cloth.clothType.shirt,color: color)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        //textField.resignFirstResponder()
+        self.view.endEditing(true);
+        return true;
     }
 }
