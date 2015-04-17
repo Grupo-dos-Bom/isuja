@@ -10,7 +10,7 @@ import UIKit
 
 class Cloth {
     var name: String
-    var image: String
+    var image: UIImage
     var color: UIColor
     var usedTimes = 0
     var type: clothType
@@ -20,7 +20,7 @@ class Cloth {
     }
 
     
-    init (name:String, image:String, type: clothType, color: UIColor) {
+    init (name:String, image: UIImage, type: clothType, color: UIColor) {
         self.name = name
         self.image = image
         self.type = type

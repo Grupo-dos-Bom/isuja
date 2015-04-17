@@ -15,29 +15,51 @@ class InsertViewController: UIViewController, UIImagePickerControllerDelegate , 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var imageField: UIImageView!
-    
+    var mediaUI = UIImagePickerController();
     
     let dataManager = DataManager.sharedInstance
     
+    var pickedImage : UIImage!
+    
+    override func viewDidLoad() {
+        
+        super.viewDidLoad();
+        
+        self.nameTextField.delegate = self;
+    }
+    
     @IBAction func pickFromCam(sender: AnyObject) {
         
-        var mediaUI = UIImagePickerController();
+        
         mediaUI.delegate = self;
         mediaUI.mediaTypes = [kUTTypeImage];
         
         mediaUI.sourceType = UIImagePickerControllerSourceType.Camera;
         mediaUI.allowsEditing = false;
+        mediaUI.cameraCaptureMode = .Photo
         
-       // self.imageField.image = (UIImage*) [info, objectForKey:UIImagePickerControllerOriginalImage];
+        //let image = mediaUI[UIImagePickerControllerOriginalImage] as UIImage
         
-        //self.presentViewController(mediaUI, animated: true, completion: nil);
+         self.presentViewController(mediaUI, animated: true, completion: nil)
     }
     
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        pickedImage = image
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+        imageField.image = image
+    }
    
     @IBAction func saveHandler(sender: AnyObject) {
         var name = nameTextField.text;
         let color = UIColor.blackColor();
-        let imagePath = String("/Users/davirdgs/Documents/iSuja/isuja/iSuja icons/Socks.png");
-        dataManager.addCloth(name,image: imagePath,type: Cloth.clothType.shirt,color: color)
+        //let imagePath = String("/Users/davirdgs/Documents/iSuja/isuja/iSuja icons/Socks.png");
+        
+        dataManager.addCloth(name,image: pickedImage, type: Cloth.clothType.shirt,color: color)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder();
+        return true;
     }
 }
