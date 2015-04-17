@@ -24,6 +24,9 @@ class WardrobeCell: UITableViewCell {
     
     
     @IBAction func increaseUsedTimes(sender: AnyObject) {
+        if (style == buttonStyle.removeCell) {
+            //codigo de remover
+        }
         cellCloth?.increaseUsedTimes()
         let n = (cellCloth?.usedTimes)
         if (n != nil) {
@@ -40,13 +43,19 @@ class WardrobeCell: UITableViewCell {
         self.nameLabel.text = currentCloth.name
         self.usedTimesLabel.text = String(currentCloth.usedTimes)
         if(style == buttonStyle.removeCell) {
-            let time: NSTimeInterval = 0.3
+            let time: NSTimeInterval = 0.2
             self.increaseButton.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
             UIView.animateWithDuration(time, animations: {
                 self.increaseButton.transform = CGAffineTransformRotate(CGAffineTransformIdentity, CGFloat(M_PI/4))
-                return
             })
-            }
+        }
+        else {
+            let time: NSTimeInterval = 0.2
+            self.increaseButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+            UIView.animateWithDuration(time, animations: {
+                self.increaseButton.transform = CGAffineTransformIdentity
+            })
+        }
     }
     
     override func awakeFromNib() {
