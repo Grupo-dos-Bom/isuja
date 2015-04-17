@@ -27,12 +27,24 @@ class WardrobeViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //println("Clicou em: #\(self.data[indexPath.row])!")
     }
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
+        
+        let laundryAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Laundry", handler: { (action:UITableViewRowAction!,indexPath:NSIndexPath!) -> Void in
+        self.dataManager.putInLaundry(indexPath.row)
+        self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        })
+        let deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Delete", handler: { (action:UITableViewRowAction!,indexPath:NSIndexPath!) -> Void in
+            self.dataManager.removeCleanCloth(indexPath.row)
+            self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        })
+        laundryAction.backgroundColor = UIColor.blueColor()
+        deleteAction.backgroundColor = UIColor.redColor()
+
+        return [laundryAction,deleteAction]
+    }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == UITableViewCellEditingStyle.Delete {
-            dataManager.putInLaundry(indexPath.row)
-            self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
-        }
+        //nothing
     }
     func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String! {
         return "Laundry"
@@ -70,11 +82,11 @@ class WardrobeViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*dataManager.addCloth("camisa roxa", image: "camisa.png", type: Cloth.clothType.shirt, color: UIColor.purpleColor())
-        dataManager.addCloth("meia verde", image: "meia.png", type: Cloth.clothType.shirt, color: UIColor.greenColor())
+        dataManager.addCloth("camisa roxa", image: UIImage(named: "camisa.png")!, type: Cloth.clothType.shirt, color: UIColor.purpleColor())
+        /*dataManager.addCloth("meia verde", image: "meia.png", type: Cloth.clothType.shirt, color: UIColor.greenColor())
         dataManager.addCloth("calca azul", image: "calca.png", type: Cloth.clothType.shirt, color: UIColor.blueColor())
-        let newCloth = Cloth (name: "suja",image: "calca.png",type: Cloth.clothType.shirt, color: UIColor.blackColor())
-        dataManager.dirtyClothes.append(newCloth)*/
+        let newCloth = Cloth (name: "suja",image: "calca.png",type: Cloth.clothType.shirt, color: UIColor.blackColor()) */
+        //dataManager.dirtyClothes.append(newCloth)
         tableView.reloadData();
 
     }
