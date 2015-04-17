@@ -59,6 +59,8 @@
                                             <constraints>
                                                 <constraint firstItem="Nma-GI-nDP" firstAttribute="baseline" secondItem="sIS-3c-KpS" secondAttribute="baseline" id="3uY-8N-ZXv"/>
                                                 <constraint firstAttribute="trailing" secondItem="Nma-GI-nDP" secondAttribute="trailing" id="B43-xl-DlV"/>
+                                                <constraint firstAttribute="centerY" secondItem="DTS-sg-Osd" secondAttribute="centerY" id="UYJ-OL-TNL"/>
+                                                <constraint firstAttribute="centerX" secondItem="DTS-sg-Osd" secondAttribute="centerX" id="VPM-OF-OHH"/>
                                                 <constraint firstItem="R6U-yh-GH4" firstAttribute="leading" secondItem="hxz-Hq-ZTc" secondAttribute="leading" id="XIf-52-v8E"/>
                                                 <constraint firstItem="R6U-yh-GH4" firstAttribute="top" secondItem="hxz-Hq-ZTc" secondAttribute="topMargin" constant="2" id="Y5K-lz-AUp"/>
                                                 <constraint firstItem="DTS-sg-Osd" firstAttribute="leading" secondItem="R6U-yh-GH4" secondAttribute="trailing" constant="8" symbolic="YES" id="mVv-eX-4Tx"/>
@@ -103,7 +105,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descrição" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k31-IC-uzi" customClass="Inser">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descrição" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k31-IC-uzi">
                                 <rect key="frame" x="16" y="319" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -123,6 +125,10 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="nameTextField" destination="k31-IC-uzi" id="gJa-4c-d8U"/>
+                            <outlet property="saveButton" destination="F8D-VF-RNw" id="FLd-z2-Mlb"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Inserir" image="Save" id="UtM-Le-ta8"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>

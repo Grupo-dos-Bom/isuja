@@ -9,10 +9,12 @@
 import UIKit
 import CoreImage
 
-class InsertViewController: UIViewController, UIImagePickerControllerDelegate {
+class InsertViewController: UIViewController, UIImagePickerControllerDelegate , UITextFieldDelegate {
     
-
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
     
+    let dataManager = DataManager.sharedInstance
     
 //    @IBAction func pickFromCam(sender: AnyObject) {
 //        let mediaUI = UIImagePickerController();
@@ -25,6 +27,9 @@ class InsertViewController: UIViewController, UIImagePickerControllerDelegate {
     
    
     @IBAction func saveHandler(sender: AnyObject) {
+        var name = nameTextField.text;
+        let color = UIColor.blackColor();
+        let imagePath = String("/Users/davirdgs/Documents/iSuja/isuja/iSuja icons/Socks.png");
+        dataManager.addCloth(name,image: imagePath,type: Cloth.clothType.shirt,color: color)
     }
-    
 }
