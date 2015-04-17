@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Grupo dos Bom. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 private let _DataManagerSharedInstance = DataManager()
 
@@ -22,22 +22,23 @@ class DataManager {
     
     
     
-    func addCloth (_ name: String, _ image: String, _ type: Cloth.clothType) {
-        let newCloth = Cloth (name,image,type)
+    func addCloth (name: String, image: String, type: Cloth.clothType, color: UIColor) {
+        let newCloth = Cloth(name: name, image: image, type: type, color: color)
         cleanClothes.append(newCloth)
     }
-    func putInLaundry (_ index: Int) {
+    func putInLaundry (index: Int) {
         dirtyClothes.append(cleanClothes[index])
         cleanClothes.removeAtIndex(index)
     }
-    func washCloth (_ index: Int) {
-        cleanClothes.append(cleanClothes[index])
+    func washCloth (index: Int) {
+        dirtyClothes[index].washCloth()
+        cleanClothes.append(dirtyClothes[index])
         dirtyClothes.removeAtIndex(index)
     }
-    func getCleanCloth (_ index: Int) -> Cloth {
+    func getCleanCloth (index: Int) -> Cloth {
         return cleanClothes[index]
     }
-    func getDirtyCloth (_ index: Int) -> Cloth {
+    func getDirtyCloth (index: Int) -> Cloth {
         return dirtyClothes[index]
     }
 }

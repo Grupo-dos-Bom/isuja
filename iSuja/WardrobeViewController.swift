@@ -12,11 +12,10 @@ class WardrobeViewController: UIViewController, UITableViewDataSource, UITableVi
 
     //============================================Table view methods
     @IBOutlet weak var tableView: UITableView!
-    var data: [String] = ["Camisa","Calça","Cueca"]
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.data.count
+        return self.dataManager.cleanClothes.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -28,17 +27,23 @@ class WardrobeViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("Clicou em: #\(self.data[indexPath.row])!")
+        //println("Clicou em: #\(self.data[indexPath.row])!")
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == UITableViewCellEditingStyle.Delete {
-            self.data.removeAtIndex(indexPath.row)
+            dataManager.putInLaundry(indexPath.row)
             self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
         }
     }
     func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String! {
         return "Dirty"
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+         tableView.reloadData()
+        
     }
     //============================================
     
@@ -46,10 +51,10 @@ class WardrobeViewController: UIViewController, UITableViewDataSource, UITableVi
     let dataManager = DataManager.sharedInstance
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataManager.addCloth("camisa restart", "calca.png", Cloth.clothType.shirt)
-        dataManager.addCloth("cueca rosa", "calca.png", Cloth.clothType.shirt)
-        dataManager.addCloth("calca azul", "calca.png", Cloth.clothType.shirt)
-        let newCloth = Cloth ("suja","calca.png",Cloth.clothType.shirt)
+        dataManager.addCloth("camisa roxa", image: "camisa.png", type: Cloth.clothType.shirt, color: UIColor.purpleColor())
+        dataManager.addCloth("meia verde", image: "meia.png", type: Cloth.clothType.shirt, color: UIColor.greenColor())
+        dataManager.addCloth("calca azul", image: "calca.png", type: Cloth.clothType.shirt, color: UIColor.blueColor())
+        let newCloth = Cloth (name: "suja",image: "calca.png",type: Cloth.clothType.shirt, color: UIColor.blackColor())
         dataManager.dirtyClothes.append(newCloth)
 
     }

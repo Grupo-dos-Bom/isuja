@@ -14,13 +14,20 @@ class WardrobeCell: UITableViewCell {
     @IBOutlet weak var imageCell: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var usedTimesLabel: UILabel!
-    
+    var cellCloth: Cloth?
 
     @IBAction func increaseUsedTimes(sender: AnyObject) {
+        cellCloth?.increaseUsedTimes()
+        let n = (cellCloth?.usedTimes)
+        if (n != nil) {
+        self.usedTimesLabel.text = String(n!)
+        }
     }
     
-    func setCloth (_ currentCloth: Cloth) {
+    func setCloth (currentCloth: Cloth) {
+        self.cellCloth = currentCloth
         self.imageCell.image = UIImage(named: currentCloth.image)
+        self.imageCell.backgroundColor = currentCloth.color
         self.nameLabel.text = currentCloth.name
         self.usedTimesLabel.text = String(currentCloth.usedTimes)
     }
