@@ -21,6 +21,13 @@ class InsertViewController: UIViewController, UIImagePickerControllerDelegate , 
     
     var pickedImage : UIImage!
     
+    override func viewDidLoad() {
+        
+        super.viewDidLoad();
+        
+        self.nameTextField.delegate = self;
+    }
+    
     @IBAction func pickFromCam(sender: AnyObject) {
         
         
@@ -52,8 +59,7 @@ class InsertViewController: UIViewController, UIImagePickerControllerDelegate , 
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        //textField.resignFirstResponder()
-        self.view.endEditing(true);
+        textField.resignFirstResponder();
         return true;
     }
 }

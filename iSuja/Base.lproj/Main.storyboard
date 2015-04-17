@@ -122,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.5" y="-320.5"/>
+            <point key="canvasLocation" x="675.5" y="-782.5"/>
         </scene>
         <!--Insert View Controller-->
         <scene sceneID="DrZ-aZ-CF7">
@@ -153,16 +153,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mT9-qh-lW8">
                                 <rect key="frame" x="67" y="51" width="240" height="306"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rk-E6-H50">
-                                <rect key="frame" x="146" y="546" width="83" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Voltar">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="49e-Tb-3d3" kind="show" id="kaN-Eq-uAv"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8D-VF-RNw">
                                 <rect key="frame" x="141" y="492" width="92" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
@@ -171,6 +161,16 @@
                                 </state>
                                 <connections>
                                     <action selector="saveHandler:" destination="s7W-Lg-28w" eventType="touchUpInside" id="l9D-Tv-7xj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rk-E6-H50">
+                                <rect key="frame" x="146" y="558" width="83" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Voltar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="49e-Tb-3d3" kind="show" id="kaN-Eq-uAv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -185,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ANS-4b-Rbb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1311.5" y="-320.5"/>
+            <point key="canvasLocation" x="1143.5" y="-362.5"/>
         </scene>
         <!--Cesto-->
         <scene sceneID="wg7-f3-ORb">
