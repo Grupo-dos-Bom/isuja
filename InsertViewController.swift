@@ -9,7 +9,7 @@
 import UIKit
 import CoreImage
 
-class InsertViewController: UIViewController <UIImagePickerControllerDelegate> {
+class InsertViewController: UIViewController, UIImagePickerControllerDelegate {
     
 
     
