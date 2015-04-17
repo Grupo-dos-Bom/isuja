@@ -41,4 +41,7 @@ class DataManager {
     func getDirtyCloth (index: Int) -> Cloth {
         return dirtyClothes[index]
     }
+    func removeCleanCloth (index: Int) {
+        cleanClothes.removeAtIndex(index)
+    }
 }
