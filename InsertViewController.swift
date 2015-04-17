@@ -8,22 +8,30 @@
 
 import UIKit
 import CoreImage
+import MobileCoreServices
 
-class InsertViewController: UIViewController, UIImagePickerControllerDelegate , UITextFieldDelegate {
+class InsertViewController: UIViewController, UIImagePickerControllerDelegate , UITextFieldDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var imageField: UIImageView!
+    
     
     let dataManager = DataManager.sharedInstance
     
-//    @IBAction func pickFromCam(sender: AnyObject) {
-//        let mediaUI = UIImagePickerController();
-//        mediaUI.sourceType = UIImagePickerControllerSourceTypeCamera;
-//        mediaUI.delegate = self;
-//        //[self presentViewController:mediaUI animated:YES completion:nil]
-//        mediaUI.presentViewController.animated = YES;
-//        self.mediaUI.presentViewController.completion = nil;
-//    }
+    @IBAction func pickFromCam(sender: AnyObject) {
+        
+        var mediaUI = UIImagePickerController();
+        mediaUI.delegate = self;
+        mediaUI.mediaTypes = [kUTTypeImage];
+        
+        mediaUI.sourceType = UIImagePickerControllerSourceType.Camera;
+        mediaUI.allowsEditing = false;
+        
+        self.imageField.image = (UIImage*) [info, objectForKey:UIImagePickerControllerOriginalImage];
+        
+        //self.presentViewController(mediaUI, animated: true, completion: nil);
+    }
     
    
     @IBAction func saveHandler(sender: AnyObject) {

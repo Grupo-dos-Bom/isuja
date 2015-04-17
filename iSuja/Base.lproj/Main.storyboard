@@ -121,11 +121,12 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kyD-mL-0Y4">
-                                <rect key="frame" x="67" y="85" width="240" height="128"/>
+                                <rect key="frame" x="67" y="85" width="240" height="173"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
+                            <outlet property="imageField" destination="kyD-mL-0Y4" id="Sai-Gn-IhZ"/>
                             <outlet property="nameTextField" destination="k31-IC-uzi" id="gJa-4c-d8U"/>
                             <outlet property="saveButton" destination="F8D-VF-RNw" id="FLd-z2-Mlb"/>
                         </connections>
